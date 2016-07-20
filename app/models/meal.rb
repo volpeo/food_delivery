@@ -4,6 +4,6 @@ class Meal
   def initialize(attributes)
     @id = attributes[:id].to_i
     @name = attributes[:name]
-    @price = attributes[:price]
+    @price = attributes[:price].to_f
   end
 end

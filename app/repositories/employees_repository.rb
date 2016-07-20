@@ -21,8 +21,16 @@ class EmployeesRepository
     @employees.find { |employee| employee.id == id }
   end
 
+  def find_by_login(login)
+    @employees.find { |employee| employee.login == login }
+  end
+
   def all
     @employees
+  end
+
+  def all_delivery_guys
+    @employees.select { |employee| employee.job == :delivery_guy }
   end
 
   private

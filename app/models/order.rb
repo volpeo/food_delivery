@@ -14,4 +14,8 @@ class Order
   def mark_as_delivered!
     @delivered = true
   end
+
+  def delivered?
+    @delivered
+  end
 end

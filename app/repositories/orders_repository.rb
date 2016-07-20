@@ -34,6 +34,14 @@ class OrdersRepository
     @orders
   end
 
+  def all_undelivered
+    @orders.select { |order| not order.delivered? }
+  end
+
+  def all_my_undelivered(employee)
+    @orders.select { |order| order.employee == employee and not order.delivered? }
+  end
+
   def write_csv
     CSV.open(@csv_path, "w") do |csv|
       csv << ["id", "date", "customer_id", "meal_id", "employee_id", "delivered"]

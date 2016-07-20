@@ -1,3 +1,4 @@
 id,login,password,job
-1,charles,456lune,delivery_guy
-2,charles,456lune,delivery_guy
+1,charles,123soleil,manager
+2,aurelien,123soleil,delivery_guy
+3,thomas,123soleil,delivery_guy
