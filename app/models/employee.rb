@@ -5,7 +5,7 @@ class Employee
     @id = attributes[:id].to_i
     @login = attributes[:login]
     @password = attributes[:password]
-    @job = attributes[:job].to_sym || :delivery_guy
+    @job = (attributes[:job] || :delivery_guy).to_sym
   end
 
   def manager?
