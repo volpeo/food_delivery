@@ -27,7 +27,7 @@ class OrdersRepository
   end
 
   def find(id)
-    @order.find { |order| order.id == id }
+    @orders.find { |order| order.id == id }
   end
 
   def all
